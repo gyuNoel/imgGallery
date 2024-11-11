@@ -1,7 +1,7 @@
-<form action="upload.php" method="POST" enctype="multipart/form-data">
+<!-- <form action="upload.php" method="POST" enctype="multipart/form-data">
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload File" name="submit">
-</form>
+</form> -->
 
 
 <?php
@@ -20,7 +20,7 @@ if(isset($_POST["submit"])) {
         }
     }
 
-    if ($_FILES["fileToUpload"]["size"] > 500000) {
+    if ($_FILES["fileToUpload"]["size"] > 10485760 ) {
         echo "Sorry, your file is too large.";
         $uploadOk = 0;
     }
